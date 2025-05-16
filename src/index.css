@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: 40 30% 98%; /* Pearl White */
+    --foreground: 0 0% 18%; /* Charcoal Gray */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 18%;
+    --primary: 217 83% 47%; /* Sapphire Blue */
+    --primary-foreground: 40 30% 98%;
+    --secondary: 0 0% 18%; /* Charcoal Gray */
+    --secondary-foreground: 40 30% 98%;
+    --muted: 220 14% 46%; /* Slate Gray */
+    --muted-foreground: 40 30% 98%;
+    --accent: 39 91% 55%; /* Warm Amber */
+    --accent-foreground: 0 0% 18%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 30% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 83% 47%;
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    --background: 0 0% 18%; /* Charcoal Gray */
+    --foreground: 40 30% 98%; /* Pearl White */
+    --card: 0 0% 18%;
+    --card-foreground: 40 30% 98%;
+    --popover: 0 0% 18%;
+    --popover-foreground: 40 30% 98%;
+    --primary: 217 83% 47%; /* Sapphire Blue */
+    --primary-foreground: 40 30% 98%;
+    --secondary: 40 30% 98%; /* Pearl White */
+    --secondary-foreground: 0 0% 18%;
+    --muted: 220 14% 46%; /* Slate Gray */
+    --muted-foreground: 40 30% 98%;
+    --accent: 39 91% 55%; /* Warm Amber */
+    --accent-foreground: 0 0% 18%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 30% 98%;
+    --border: 217 19% 27%;
+    --input: 217 19% 27%;
+    --ring: 217 83% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-pearl text-charcoal font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-sapphire text-pearl hover:bg-sapphire/90 px-6 py-3 rounded-md font-medium transition-all;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border border-charcoal text-charcoal hover:bg-charcoal hover:text-pearl px-6 py-3 rounded-md font-medium transition-all;
+  }
+  
+  .btn-accent {
+    @apply bg-amber text-charcoal hover:bg-amber/90 px-6 py-3 rounded-md font-medium transition-all;
+  }
+}
